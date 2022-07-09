@@ -12,8 +12,6 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "タイムライン"
-
-        view.backgroundColor = .white
     }
 
 }

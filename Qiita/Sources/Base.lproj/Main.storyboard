@@ -26,12 +26,12 @@
             </objects>
             <point key="canvasLocation" x="1438" y="70"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="Ye0-J3-1Hr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SVW-pn-LtQ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SVW-pn-LtQ" customClass="NavigationViewController" customModule="Qiita" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eJN-BQ-hoL" customClass="NavigationBarController" customModule="Qiita" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eJN-BQ-hoL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

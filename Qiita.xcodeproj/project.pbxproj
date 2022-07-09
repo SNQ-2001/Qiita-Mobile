@@ -18,6 +18,7 @@
 		1C0C790D2879429A00ED0759 /* QiitaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C790C2879429A00ED0759 /* QiitaUITestsLaunchTests.swift */; };
 		1CCDDAFD287950CF00521785 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDAFC287950CF00521785 /* TimelineViewController.swift */; };
 		1CCDDAFF2879520E00521785 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDAFE2879520E00521785 /* TrendViewController.swift */; };
+		1CCDDB032879627A00521785 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB022879627A00521785 /* NavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1C0C790C2879429A00ED0759 /* QiitaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1CCDDAFC287950CF00521785 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		1CCDDAFE2879520E00521785 /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
+		1CCDDB022879627A00521785 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		1C0C791C287942E500ED0759 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1CCDDB022879627A00521785 /* NavigationViewController.swift */,
 				1C0C78ED2879429800ED0759 /* HomeViewController.swift */,
 				1CCDDAFC287950CF00521785 /* TimelineViewController.swift */,
 				1CCDDAFE2879520E00521785 /* TrendViewController.swift */,
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CCDDB032879627A00521785 /* NavigationViewController.swift in Sources */,
 				1C0C78EE2879429800ED0759 /* HomeViewController.swift in Sources */,
 				1CCDDAFD287950CF00521785 /* TimelineViewController.swift in Sources */,
 				1CCDDAFF2879520E00521785 /* TrendViewController.swift in Sources */,
