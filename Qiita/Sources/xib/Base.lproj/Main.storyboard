@@ -19,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ホーム" id="udf-q3-Ghm"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="house" catalog="system" id="udf-q3-Ghm"/>
                     <navigationItem key="navigationItem" id="UqV-6j-Z61"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,7 +75,7 @@
                         <viewLayoutGuide key="safeArea" id="iey-d9-bdJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="タイムライン" id="2WD-7I-bqV"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="タイムライン" image="clock" catalog="system" id="2WD-7I-bqV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5g-MI-1N8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,7 +91,7 @@
                         <viewLayoutGuide key="safeArea" id="Quj-34-Iuo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="2" title="トレンド" id="PE2-FN-M2q"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="トレンド" image="chart.line.uptrend.xyaxis" catalog="system" id="PE2-FN-M2q"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODE-E6-rGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,6 +99,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chart.line.uptrend.xyaxis" catalog="system" width="128" height="101"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
