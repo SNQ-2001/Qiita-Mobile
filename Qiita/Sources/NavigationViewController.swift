@@ -10,15 +10,13 @@ import UIKit
 class NavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        if #available(iOS 15.0, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.backgroundColor = UIColor(red: 84/255, green: 197/255, blue: 2/255, alpha: 255/255)
-            UINavigationBar.appearance().standardAppearance = appearance
-            UINavigationBar.appearance().compactAppearance = appearance
-            UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        } else {
-            navigationBar.barTintColor = UIColor(red: 84/255, green: 197/255, blue: 2/255, alpha: 255/255)
-        }
+
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = UIColor(red: 85/255, green: 197/255, blue: 0/255, alpha: 1.0)
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        
     }
 
 }

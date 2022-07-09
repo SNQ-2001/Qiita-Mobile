@@ -151,8 +151,7 @@
 				1C0C78ED2879429800ED0759 /* HomeViewController.swift */,
 				1CCDDAFC287950CF00521785 /* TimelineViewController.swift */,
 				1CCDDAFE2879520E00521785 /* TrendViewController.swift */,
-				1C0C78EF2879429800ED0759 /* Main.storyboard */,
-				1C0C78F42879429A00ED0759 /* LaunchScreen.storyboard */,
+				1CCDDB0E28797FA900521785 /* xib */,
 				1CCDDB0B28797F3400521785 /* Extensions */,
 			);
 			path = Sources;
@@ -164,6 +163,15 @@
 				1CCDDB0C28797F4700521785 /* UIColor+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1CCDDB0E28797FA900521785 /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				1C0C78EF2879429800ED0759 /* Main.storyboard */,
+				1C0C78F42879429A00ED0759 /* LaunchScreen.storyboard */,
+			);
+			path = xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
