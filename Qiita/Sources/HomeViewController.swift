@@ -10,8 +10,6 @@ import UIKit
 class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.tabBar.tintColor = UIColor(red: 85/255, green: 197/255, blue: 3/255, alpha: 255/255)
-        view.backgroundColor = .white
+        title = "ホーム"
     }
 }
-

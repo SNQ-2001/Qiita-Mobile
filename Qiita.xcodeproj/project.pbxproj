@@ -18,6 +18,15 @@
 		1C0C790D2879429A00ED0759 /* QiitaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C790C2879429A00ED0759 /* QiitaUITestsLaunchTests.swift */; };
 		1CCDDAFD287950CF00521785 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDAFC287950CF00521785 /* TimelineViewController.swift */; };
 		1CCDDAFF2879520E00521785 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDAFE2879520E00521785 /* TrendViewController.swift */; };
+		1CCDDB032879627A00521785 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB022879627A00521785 /* NavigationViewController.swift */; };
+		1CCDDB09287974EF00521785 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB08287974EF00521785 /* TabBarViewController.swift */; };
+		1CCDDB0D28797F4700521785 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB0C28797F4700521785 /* UIColor+.swift */; };
+		1CCDDB172879900B00521785 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB162879900B00521785 /* KeychainAccess */; };
+		1CCDDB192879917C00521785 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB182879917C00521785 /* SignInViewController.swift */; };
+		1CCDDB1C2879B66000521785 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCDDB1B2879B65F00521785 /* WebKit.framework */; };
+		1CCDDB1E2879B69400521785 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB1D2879B69400521785 /* WebViewController.swift */; };
+		1CCDDB202879C3E800521785 /* signin_background.json in Resources */ = {isa = PBXBuildFile; fileRef = 1CCDDB1F2879C3E700521785 /* signin_background.json */; };
+		1CCDDB232879C42400521785 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB222879C42400521785 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,13 @@
 		1C0C790C2879429A00ED0759 /* QiitaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1CCDDAFC287950CF00521785 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		1CCDDAFE2879520E00521785 /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
+		1CCDDB022879627A00521785 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		1CCDDB08287974EF00521785 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		1CCDDB0C28797F4700521785 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		1CCDDB182879917C00521785 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		1CCDDB1B2879B65F00521785 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		1CCDDB1D2879B69400521785 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		1CCDDB1F2879C3E700521785 /* signin_background.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signin_background.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CCDDB1C2879B66000521785 /* WebKit.framework in Frameworks */,
+				1CCDDB172879900B00521785 /* KeychainAccess in Frameworks */,
+				1CCDDB232879C42400521785 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +106,7 @@
 				1C0C78FF2879429A00ED0759 /* QiitaTests */,
 				1C0C79092879429A00ED0759 /* QiitaUITests */,
 				1C0C78E72879429800ED0759 /* Products */,
+				1CCDDB1A2879B65F00521785 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +151,7 @@
 		1C0C7919287942A600ED0759 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1CCDDB1F2879C3E700521785 /* signin_background.json */,
 				1C0C78F22879429A00ED0759 /* Assets.xcassets */,
 				1C0C78F72879429A00ED0759 /* Info.plist */,
 			);
@@ -140,13 +161,42 @@
 		1C0C791C287942E500ED0759 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1CCDDB182879917C00521785 /* SignInViewController.swift */,
+				1CCDDB1D2879B69400521785 /* WebViewController.swift */,
+				1CCDDB022879627A00521785 /* NavigationViewController.swift */,
+				1CCDDB08287974EF00521785 /* TabBarViewController.swift */,
 				1C0C78ED2879429800ED0759 /* HomeViewController.swift */,
 				1CCDDAFC287950CF00521785 /* TimelineViewController.swift */,
 				1CCDDAFE2879520E00521785 /* TrendViewController.swift */,
+				1CCDDB0E28797FA900521785 /* xib */,
+				1CCDDB0B28797F3400521785 /* Extensions */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1CCDDB0B28797F3400521785 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1CCDDB0C28797F4700521785 /* UIColor+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1CCDDB0E28797FA900521785 /* xib */ = {
+			isa = PBXGroup;
+			children = (
 				1C0C78EF2879429800ED0759 /* Main.storyboard */,
 				1C0C78F42879429A00ED0759 /* LaunchScreen.storyboard */,
 			);
-			path = Sources;
+			path = xib;
+			sourceTree = "<group>";
+		};
+		1CCDDB1A2879B65F00521785 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CCDDB1B2879B65F00521785 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +215,10 @@
 			dependencies = (
 			);
 			name = Qiita;
+			packageProductDependencies = (
+				1CCDDB162879900B00521785 /* KeychainAccess */,
+				1CCDDB222879C42400521785 /* Lottie */,
+			);
 			productName = Qiita;
 			productReference = 1C0C78E62879429800ED0759 /* Qiita.app */;
 			productType = "com.apple.product-type.application";
@@ -237,6 +291,10 @@
 				Base,
 			);
 			mainGroup = 1C0C78DD2879429800ED0759;
+			packageReferences = (
+				1CCDDB152879900B00521785 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				1CCDDB212879C42400521785 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 1C0C78E72879429800ED0759 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -254,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C0C78F62879429A00ED0759 /* LaunchScreen.storyboard in Resources */,
+				1CCDDB202879C3E800521785 /* signin_background.json in Resources */,
 				1C0C78F32879429A00ED0759 /* Assets.xcassets in Resources */,
 				1C0C78F12879429800ED0759 /* Main.storyboard in Resources */,
 			);
@@ -280,9 +339,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CCDDB032879627A00521785 /* NavigationViewController.swift in Sources */,
+				1CCDDB0D28797F4700521785 /* UIColor+.swift in Sources */,
 				1C0C78EE2879429800ED0759 /* HomeViewController.swift in Sources */,
+				1CCDDB1E2879B69400521785 /* WebViewController.swift in Sources */,
 				1CCDDAFD287950CF00521785 /* TimelineViewController.swift in Sources */,
 				1CCDDAFF2879520E00521785 /* TrendViewController.swift in Sources */,
+				1CCDDB192879917C00521785 /* SignInViewController.swift in Sources */,
+				1CCDDB09287974EF00521785 /* TabBarViewController.swift in Sources */,
 				1C0C78EA2879429800ED0759 /* AppDelegate.swift in Sources */,
 				1C0C78EC2879429800ED0759 /* SceneDelegate.swift in Sources */,
 			);
@@ -469,6 +533,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -497,6 +562,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -626,6 +692,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1CCDDB152879900B00521785 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess/";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		1CCDDB212879C42400521785 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CCDDB162879900B00521785 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CCDDB152879900B00521785 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		1CCDDB222879C42400521785 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CCDDB212879C42400521785 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C0C78DE2879429800ED0759 /* Project object */;
 }
