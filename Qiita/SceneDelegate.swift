@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = windows
         windows.makeKeyAndVisible()
         let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
-        if keychain["auth"] == nil {
+        if keychain["user_session_key"] == nil {
             let vc = sb.instantiateViewController(withIdentifier: "signin")
             window!.rootViewController = vc
         } else {

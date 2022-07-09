@@ -50,18 +50,14 @@ class WebViewController: UIViewController {
         webView.configuration.websiteDataStore.httpCookieStore.getAllCookies() { (cookies) in
             for eachcookie in cookies {
                 if eachcookie.domain.contains("qiita.com") {
-
-//                    print("\(eachcookie.name): \(eachcookie.value)")
-//                    self.keychain["\(eachcookie.name)"] = "\(eachcookie.value)"
-
-//                    self.dismiss(animated: true, completion: nil)
-//
-//                    let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//                    let vc = storyboard.instantiateViewController(withIdentifier: "user")
-//                    vc.modalPresentationStyle = .fullScreen
-//                    self.present(vc, animated: true)
+                    print("\(eachcookie.name): \(eachcookie.value)")
+                    self.keychain["\(eachcookie.name)"] = "\(eachcookie.value)"
                 }
             }
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let vc = storyboard.instantiateViewController(withIdentifier: "user")
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
         }
     }
 }
