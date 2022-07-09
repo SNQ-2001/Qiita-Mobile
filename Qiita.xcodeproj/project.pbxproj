@@ -19,6 +19,7 @@
 		1CCDDAFD287950CF00521785 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDAFC287950CF00521785 /* TimelineViewController.swift */; };
 		1CCDDAFF2879520E00521785 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDAFE2879520E00521785 /* TrendViewController.swift */; };
 		1CCDDB032879627A00521785 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB022879627A00521785 /* NavigationViewController.swift */; };
+		1CCDDB09287974EF00521785 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB08287974EF00521785 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		1CCDDAFC287950CF00521785 /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		1CCDDAFE2879520E00521785 /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
 		1CCDDB022879627A00521785 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		1CCDDB08287974EF00521785 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				1CCDDB022879627A00521785 /* NavigationViewController.swift */,
+				1CCDDB08287974EF00521785 /* TabBarViewController.swift */,
 				1C0C78ED2879429800ED0759 /* HomeViewController.swift */,
 				1CCDDAFC287950CF00521785 /* TimelineViewController.swift */,
 				1CCDDAFE2879520E00521785 /* TrendViewController.swift */,
@@ -287,6 +290,7 @@
 				1C0C78EE2879429800ED0759 /* HomeViewController.swift in Sources */,
 				1CCDDAFD287950CF00521785 /* TimelineViewController.swift in Sources */,
 				1CCDDAFF2879520E00521785 /* TrendViewController.swift in Sources */,
+				1CCDDB09287974EF00521785 /* TabBarViewController.swift in Sources */,
 				1C0C78EA2879429800ED0759 /* AppDelegate.swift in Sources */,
 				1C0C78EC2879429800ED0759 /* SceneDelegate.swift in Sources */,
 			);
