@@ -20,6 +20,7 @@
 		1CCDDAFF2879520E00521785 /* TrendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDAFE2879520E00521785 /* TrendViewController.swift */; };
 		1CCDDB032879627A00521785 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB022879627A00521785 /* NavigationViewController.swift */; };
 		1CCDDB09287974EF00521785 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB08287974EF00521785 /* TabBarViewController.swift */; };
+		1CCDDB0D28797F4700521785 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB0C28797F4700521785 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		1CCDDAFE2879520E00521785 /* TrendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewController.swift; sourceTree = "<group>"; };
 		1CCDDB022879627A00521785 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		1CCDDB08287974EF00521785 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		1CCDDB0C28797F4700521785 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,8 +153,17 @@
 				1CCDDAFE2879520E00521785 /* TrendViewController.swift */,
 				1C0C78EF2879429800ED0759 /* Main.storyboard */,
 				1C0C78F42879429A00ED0759 /* LaunchScreen.storyboard */,
+				1CCDDB0B28797F3400521785 /* Extensions */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		1CCDDB0B28797F3400521785 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1CCDDB0C28797F4700521785 /* UIColor+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CCDDB032879627A00521785 /* NavigationViewController.swift in Sources */,
+				1CCDDB0D28797F4700521785 /* UIColor+.swift in Sources */,
 				1C0C78EE2879429800ED0759 /* HomeViewController.swift in Sources */,
 				1CCDDAFD287950CF00521785 /* TimelineViewController.swift in Sources */,
 				1CCDDAFF2879520E00521785 /* TrendViewController.swift in Sources */,

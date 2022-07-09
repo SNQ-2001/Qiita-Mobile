@@ -9,10 +9,17 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
 
+    var qiita: UIImageView = {
+        let view = UIImageView(image: UIImage(named: "logo-background-color"))
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.contentMode = .scaleAspectFit
+        return view
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "Qiita"
+        navigationItem.titleView = qiita
     }
 
 }
