@@ -17,27 +17,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD8-Px-oNZ">
-                                <rect key="frame" x="50" y="432.5" width="314" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7c-OU-WAH">
+                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="tap:" destination="faW-Ew-YHb" eventType="touchUpInside" id="fhM-3d-l4U"/>
+                                    <segue destination="SgI-i3-ZtT" kind="show" id="STK-Mb-t7o"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Nja-b9-Fmt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="MD8-Px-oNZ" firstAttribute="leading" secondItem="Nja-b9-Fmt" secondAttribute="leading" constant="50" id="a3Q-GQ-HKa"/>
-                            <constraint firstItem="MD8-Px-oNZ" firstAttribute="centerY" secondItem="CY4-v7-bKG" secondAttribute="centerY" id="wjF-Dg-DO6"/>
-                            <constraint firstItem="Nja-b9-Fmt" firstAttribute="trailing" secondItem="MD8-Px-oNZ" secondAttribute="trailing" constant="50" id="wsc-Se-xIg"/>
+                            <constraint firstItem="w7c-OU-WAH" firstAttribute="centerX" secondItem="CY4-v7-bKG" secondAttribute="centerX" id="UeO-BT-MFw"/>
+                            <constraint firstItem="w7c-OU-WAH" firstAttribute="centerY" secondItem="CY4-v7-bKG" secondAttribute="centerY" id="iNf-F1-S9V"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8A-Ga-lG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1236" y="70"/>
+            <point key="canvasLocation" x="-2493" y="70"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="zW1-9q-82a">
+            <objects>
+                <viewController id="SgI-i3-ZtT" customClass="WebViewController" customModule="Qiita" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EVX-VR-uSm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Yf9-PP-kZV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HS5-t9-Wsv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EHx-Kz-8vg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1696" y="70"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="Ye0-J3-1Hr">

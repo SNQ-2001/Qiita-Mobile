@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import KeychainAccess
 
 class TimelineViewController: UIViewController {
-
+    let keychain = Keychain(service: "com.Qiita")
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "タイムライン"
+
+        keychain["auth"] = nil
     }
 
 }
