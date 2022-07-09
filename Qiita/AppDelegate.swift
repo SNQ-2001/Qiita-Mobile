@@ -10,14 +10,9 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // TabBarに色をつける
-        if #available(iOS 15.0, *) {
-            let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
-            tabBarAppearance.configureWithDefaultBackground()
-            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
-            UITabBar.appearance().standardAppearance = tabBarAppearance
-        }
         return true
     }
 

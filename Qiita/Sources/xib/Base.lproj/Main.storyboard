@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SVW-pn-LtQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,27 +9,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ホーム-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Sign In View Controller-->
+        <scene sceneID="3zf-K0-tIT">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Qiita" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="signin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="faW-Ew-YHb" customClass="SignInViewController" customModule="Qiita" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CY4-v7-bKG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MD8-Px-oNZ">
+                                <rect key="frame" x="50" y="432.5" width="314" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tap:" destination="faW-Ew-YHb" eventType="touchUpInside" id="fhM-3d-l4U"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nja-b9-Fmt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MD8-Px-oNZ" firstAttribute="leading" secondItem="Nja-b9-Fmt" secondAttribute="leading" constant="50" id="a3Q-GQ-HKa"/>
+                            <constraint firstItem="MD8-Px-oNZ" firstAttribute="centerY" secondItem="CY4-v7-bKG" secondAttribute="centerY" id="wjF-Dg-DO6"/>
+                            <constraint firstItem="Nja-b9-Fmt" firstAttribute="trailing" secondItem="MD8-Px-oNZ" secondAttribute="trailing" constant="50" id="wsc-Se-xIg"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ホーム" image="house" catalog="system" id="udf-q3-Ghm"/>
-                    <navigationItem key="navigationItem" id="UqV-6j-Z61"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8A-Ga-lG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="70"/>
+            <point key="canvasLocation" x="-1236" y="70"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="Ye0-J3-1Hr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SVW-pn-LtQ" customClass="NavigationViewController" customModule="Qiita" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="user" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SVW-pn-LtQ" customClass="NavigationViewController" customModule="Qiita" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eJN-BQ-hoL">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -64,6 +77,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8YO-Ft-beQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="567" y="70"/>
+        </scene>
+        <!--ホーム-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Qiita" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="house" catalog="system" id="udf-q3-Ghm"/>
+                    <navigationItem key="navigationItem" id="UqV-6j-Z61"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1438" y="70"/>
         </scene>
         <!--タイムライン-->
         <scene sceneID="WfG-ur-dne">

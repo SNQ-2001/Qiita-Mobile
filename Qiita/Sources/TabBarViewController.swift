@@ -19,6 +19,14 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // TabBarに色をつける
+        if #available(iOS 15.0, *) {
+            let tabBarAppearance: UITabBarAppearance = UITabBarAppearance()
+            tabBarAppearance.configureWithDefaultBackground()
+            UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
+            UITabBar.appearance().standardAppearance = tabBarAppearance
+        }
+
         // NavigationBarに画像を設定
         navigationItem.titleView = qiita
 

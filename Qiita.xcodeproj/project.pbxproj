@@ -21,6 +21,8 @@
 		1CCDDB032879627A00521785 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB022879627A00521785 /* NavigationViewController.swift */; };
 		1CCDDB09287974EF00521785 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB08287974EF00521785 /* TabBarViewController.swift */; };
 		1CCDDB0D28797F4700521785 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB0C28797F4700521785 /* UIColor+.swift */; };
+		1CCDDB172879900B00521785 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB162879900B00521785 /* KeychainAccess */; };
+		1CCDDB192879917C00521785 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB182879917C00521785 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,7 @@
 		1CCDDB022879627A00521785 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		1CCDDB08287974EF00521785 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		1CCDDB0C28797F4700521785 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		1CCDDB182879917C00521785 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CCDDB172879900B00521785 /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +150,7 @@
 		1C0C791C287942E500ED0759 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1CCDDB182879917C00521785 /* SignInViewController.swift */,
 				1CCDDB022879627A00521785 /* NavigationViewController.swift */,
 				1CCDDB08287974EF00521785 /* TabBarViewController.swift */,
 				1C0C78ED2879429800ED0759 /* HomeViewController.swift */,
@@ -190,6 +195,9 @@
 			dependencies = (
 			);
 			name = Qiita;
+			packageProductDependencies = (
+				1CCDDB162879900B00521785 /* KeychainAccess */,
+			);
 			productName = Qiita;
 			productReference = 1C0C78E62879429800ED0759 /* Qiita.app */;
 			productType = "com.apple.product-type.application";
@@ -262,6 +270,9 @@
 				Base,
 			);
 			mainGroup = 1C0C78DD2879429800ED0759;
+			packageReferences = (
+				1CCDDB152879900B00521785 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 1C0C78E72879429800ED0759 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,6 +321,7 @@
 				1C0C78EE2879429800ED0759 /* HomeViewController.swift in Sources */,
 				1CCDDAFD287950CF00521785 /* TimelineViewController.swift in Sources */,
 				1CCDDAFF2879520E00521785 /* TrendViewController.swift in Sources */,
+				1CCDDB192879917C00521785 /* SignInViewController.swift in Sources */,
 				1CCDDB09287974EF00521785 /* TabBarViewController.swift in Sources */,
 				1C0C78EA2879429800ED0759 /* AppDelegate.swift in Sources */,
 				1C0C78EC2879429800ED0759 /* SceneDelegate.swift in Sources */,
@@ -656,6 +668,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1CCDDB152879900B00521785 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess/";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CCDDB162879900B00521785 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CCDDB152879900B00521785 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C0C78DE2879429800ED0759 /* Project object */;
 }
