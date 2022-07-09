@@ -25,6 +25,8 @@
 		1CCDDB192879917C00521785 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB182879917C00521785 /* SignInViewController.swift */; };
 		1CCDDB1C2879B66000521785 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCDDB1B2879B65F00521785 /* WebKit.framework */; };
 		1CCDDB1E2879B69400521785 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB1D2879B69400521785 /* WebViewController.swift */; };
+		1CCDDB202879C3E800521785 /* signin_background.json in Resources */ = {isa = PBXBuildFile; fileRef = 1CCDDB1F2879C3E700521785 /* signin_background.json */; };
+		1CCDDB232879C42400521785 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB222879C42400521785 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,7 @@
 		1CCDDB182879917C00521785 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		1CCDDB1B2879B65F00521785 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1CCDDB1D2879B69400521785 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		1CCDDB1F2879C3E700521785 /* signin_background.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signin_background.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,7 @@
 			files = (
 				1CCDDB1C2879B66000521785 /* WebKit.framework in Frameworks */,
 				1CCDDB172879900B00521785 /* KeychainAccess in Frameworks */,
+				1CCDDB232879C42400521785 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +151,7 @@
 		1C0C7919287942A600ED0759 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1CCDDB1F2879C3E700521785 /* signin_background.json */,
 				1C0C78F22879429A00ED0759 /* Assets.xcassets */,
 				1C0C78F72879429A00ED0759 /* Info.plist */,
 			);
@@ -212,6 +217,7 @@
 			name = Qiita;
 			packageProductDependencies = (
 				1CCDDB162879900B00521785 /* KeychainAccess */,
+				1CCDDB222879C42400521785 /* Lottie */,
 			);
 			productName = Qiita;
 			productReference = 1C0C78E62879429800ED0759 /* Qiita.app */;
@@ -287,6 +293,7 @@
 			mainGroup = 1C0C78DD2879429800ED0759;
 			packageReferences = (
 				1CCDDB152879900B00521785 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				1CCDDB212879C42400521785 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 1C0C78E72879429800ED0759 /* Products */;
 			projectDirPath = "";
@@ -305,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C0C78F62879429A00ED0759 /* LaunchScreen.storyboard in Resources */,
+				1CCDDB202879C3E800521785 /* signin_background.json in Resources */,
 				1C0C78F32879429A00ED0759 /* Assets.xcassets in Resources */,
 				1C0C78F12879429800ED0759 /* Main.storyboard in Resources */,
 			);
@@ -694,6 +702,14 @@
 				kind = branch;
 			};
 		};
+		1CCDDB212879C42400521785 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -701,6 +717,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1CCDDB152879900B00521785 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		1CCDDB222879C42400521785 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CCDDB212879C42400521785 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

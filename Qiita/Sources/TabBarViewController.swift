@@ -9,11 +9,11 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
 
-    var qiita: UIImageView = {
-        let view = UIImageView(image: UIImage(named: "logo-background-color"))
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.contentMode = .scaleAspectFit
-        return view
+    var qiitaIcon: UIImageView = {
+        let icon = UIImageView(image: UIImage(named: "logo-background-color"))
+        icon.translatesAutoresizingMaskIntoConstraints = false
+        icon.contentMode = .scaleAspectFit
+        return icon
     }()
 
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class TabBarViewController: UITabBarController {
         }
 
         // NavigationBarに画像を設定
-        navigationItem.titleView = qiita
+        navigationItem.titleView = qiitaIcon
 
         // Tabが選択された時の色を指定
         tabBar.tintColor = UIColor(red: 85/255, green: 197/255, blue: 0/255, alpha: 1.0)

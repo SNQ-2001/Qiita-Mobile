@@ -17,33 +17,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7c-OU-WAH">
-                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="SgI-i3-ZtT" kind="show" id="STK-Mb-t7o"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeB-on-xEb" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="signin_background"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Nja-b9-Fmt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="w7c-OU-WAH" firstAttribute="centerX" secondItem="CY4-v7-bKG" secondAttribute="centerX" id="UeO-BT-MFw"/>
-                            <constraint firstItem="w7c-OU-WAH" firstAttribute="centerY" secondItem="CY4-v7-bKG" secondAttribute="centerY" id="iNf-F1-S9V"/>
+                            <constraint firstAttribute="bottom" secondItem="FeB-on-xEb" secondAttribute="bottom" id="8oj-px-lrp"/>
+                            <constraint firstAttribute="trailing" secondItem="FeB-on-xEb" secondAttribute="trailing" id="WKY-2Q-xtA"/>
+                            <constraint firstItem="FeB-on-xEb" firstAttribute="top" secondItem="CY4-v7-bKG" secondAttribute="top" id="n0M-f2-aXp"/>
+                            <constraint firstItem="FeB-on-xEb" firstAttribute="leading" secondItem="CY4-v7-bKG" secondAttribute="leading" id="ouj-bc-Jhp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="FeB-on-xEb" id="mHW-vX-dL7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8A-Ga-lG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2493" y="70"/>
+            <point key="canvasLocation" x="-2494.202898550725" y="69.642857142857139"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="zW1-9q-82a">
             <objects>
                 <viewController id="SgI-i3-ZtT" customClass="WebViewController" customModule="Qiita" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EVX-VR-uSm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Yf9-PP-kZV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
