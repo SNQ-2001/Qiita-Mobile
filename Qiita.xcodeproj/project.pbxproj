@@ -27,6 +27,8 @@
 		1CCDDB1E2879B69400521785 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB1D2879B69400521785 /* WebViewController.swift */; };
 		1CCDDB202879C3E800521785 /* signin_background.json in Resources */ = {isa = PBXBuildFile; fileRef = 1CCDDB1F2879C3E700521785 /* signin_background.json */; };
 		1CCDDB232879C42400521785 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB222879C42400521785 /* Lottie */; };
+		1CCDDB26287A807100521785 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB25287A807100521785 /* Alamofire */; };
+		1CCDDB29287A808300521785 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB28287A808300521785 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CCDDB1C2879B66000521785 /* WebKit.framework in Frameworks */,
+				1CCDDB26287A807100521785 /* Alamofire in Frameworks */,
+				1CCDDB29287A808300521785 /* AlamofireImage in Frameworks */,
 				1CCDDB172879900B00521785 /* KeychainAccess in Frameworks */,
 				1CCDDB232879C42400521785 /* Lottie in Frameworks */,
 			);
@@ -218,6 +222,8 @@
 			packageProductDependencies = (
 				1CCDDB162879900B00521785 /* KeychainAccess */,
 				1CCDDB222879C42400521785 /* Lottie */,
+				1CCDDB25287A807100521785 /* Alamofire */,
+				1CCDDB28287A808300521785 /* AlamofireImage */,
 			);
 			productName = Qiita;
 			productReference = 1C0C78E62879429800ED0759 /* Qiita.app */;
@@ -294,6 +300,8 @@
 			packageReferences = (
 				1CCDDB152879900B00521785 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				1CCDDB212879C42400521785 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				1CCDDB24287A807100521785 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1CCDDB27287A808300521785 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 1C0C78E72879429800ED0759 /* Products */;
 			projectDirPath = "";
@@ -710,6 +718,22 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		1CCDDB24287A807100521785 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		1CCDDB27287A808300521785 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -722,6 +746,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1CCDDB212879C42400521785 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		1CCDDB25287A807100521785 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CCDDB24287A807100521785 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		1CCDDB28287A808300521785 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CCDDB27287A808300521785 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
