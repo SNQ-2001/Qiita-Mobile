@@ -47,7 +47,8 @@ class HomeViewController: UIViewController {
 
                 for element in elements {
                     if try element.attr("data-component-name") == "HomeIndexPage" {
-                        print(element.data())
+                        let homeIndexPage = try JSONDecoder().decode(HomeIndexPage.self, from: element.data().data(using: .utf8)!)
+                        print(homeIndexPage)
                     }
                 }
 

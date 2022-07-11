@@ -35,20 +35,19 @@ struct Edge: Codable {
 // MARK: - Node
 struct Node: Codable {
     let encryptedID: String
-    let isLikedByViewer, isStockableByViewer, isStockedByViewer: Bool
     let likesCount: Int
     let linkURL: String
-    let publishedAt: Date
-    let title, uuid: String
+    let publishedAt: String
+    let title: String
     let author: Author
     let organization: Organization?
     let tags: [Organization]
 
     enum CodingKeys: String, CodingKey {
         case encryptedID = "encryptedId"
-        case isLikedByViewer, isStockableByViewer, isStockedByViewer, likesCount
+        case likesCount
         case linkURL = "linkUrl"
-        case publishedAt, title, uuid, author, organization, tags
+        case publishedAt, title, author, organization, tags
     }
 }
 
