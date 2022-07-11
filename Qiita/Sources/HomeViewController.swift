@@ -34,8 +34,8 @@ class HomeViewController: UIViewController {
                 let html: String = String(data: data, encoding: .utf8) ?? ""
                 let doc: Document = try SwiftSoup.parse(html)
                 let link: Element = try doc.getElementById("js-react-on-rails-context")!
-                let linkText = try link.data()
-                print("👺: \(linkText)")
+                let csrf_token = try JSONDecoder().decode(CSRFToken.self, from: link.data().data(using: .utf8)!)
+                print(csrf_token.settings.csrfToken)
             } catch Exception.Error(_, let message) {
                 print(message)
             } catch {
