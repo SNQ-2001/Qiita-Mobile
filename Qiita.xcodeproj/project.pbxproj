@@ -31,6 +31,7 @@
 		1CCDDB29287A808300521785 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB28287A808300521785 /* AlamofireImage */; };
 		1CCDDB2C287A859A00521785 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB2B287A859A00521785 /* SwiftSoup */; };
 		1CCDDB2F287C45DE00521785 /* CSRFToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB2E287C45DE00521785 /* CSRFToken.swift */; };
+		1CCDDB31287C781D00521785 /* HomeIndexPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB30287C781C00521785 /* HomeIndexPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		1CCDDB1D2879B69400521785 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		1CCDDB1F2879C3E700521785 /* signin_background.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signin_background.json; sourceTree = "<group>"; };
 		1CCDDB2E287C45DE00521785 /* CSRFToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSRFToken.swift; sourceTree = "<group>"; };
+		1CCDDB30287C781C00521785 /* HomeIndexPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIndexPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				1CCDDB2E287C45DE00521785 /* CSRFToken.swift */,
+				1CCDDB30287C781C00521785 /* HomeIndexPage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				1CCDDAFD287950CF00521785 /* TimelineViewController.swift in Sources */,
 				1CCDDAFF2879520E00521785 /* TrendViewController.swift in Sources */,
 				1CCDDB192879917C00521785 /* SignInViewController.swift in Sources */,
+				1CCDDB31287C781D00521785 /* HomeIndexPage.swift in Sources */,
 				1CCDDB09287974EF00521785 /* TabBarViewController.swift in Sources */,
 				1C0C78EA2879429800ED0759 /* AppDelegate.swift in Sources */,
 				1C0C78EC2879429800ED0759 /* SceneDelegate.swift in Sources */,
