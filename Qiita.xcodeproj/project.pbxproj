@@ -29,6 +29,8 @@
 		1CCDDB232879C42400521785 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB222879C42400521785 /* Lottie */; };
 		1CCDDB26287A807100521785 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB25287A807100521785 /* Alamofire */; };
 		1CCDDB29287A808300521785 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB28287A808300521785 /* AlamofireImage */; };
+		1CCDDB2C287A859A00521785 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB2B287A859A00521785 /* SwiftSoup */; };
+		1CCDDB2F287C45DE00521785 /* CSRFToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB2E287C45DE00521785 /* CSRFToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,7 @@
 		1CCDDB1B2879B65F00521785 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1CCDDB1D2879B69400521785 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		1CCDDB1F2879C3E700521785 /* signin_background.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signin_background.json; sourceTree = "<group>"; };
+		1CCDDB2E287C45DE00521785 /* CSRFToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSRFToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 				1CCDDB29287A808300521785 /* AlamofireImage in Frameworks */,
 				1CCDDB172879900B00521785 /* KeychainAccess in Frameworks */,
 				1CCDDB232879C42400521785 /* Lottie in Frameworks */,
+				1CCDDB2C287A859A00521785 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +176,7 @@
 				1C0C78ED2879429800ED0759 /* HomeViewController.swift */,
 				1CCDDAFC287950CF00521785 /* TimelineViewController.swift */,
 				1CCDDAFE2879520E00521785 /* TrendViewController.swift */,
+				1CCDDB2D287C454A00521785 /* Model */,
 				1CCDDB0E28797FA900521785 /* xib */,
 				1CCDDB0B28797F3400521785 /* Extensions */,
 			);
@@ -203,6 +208,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1CCDDB2D287C454A00521785 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1CCDDB2E287C45DE00521785 /* CSRFToken.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,6 +237,7 @@
 				1CCDDB222879C42400521785 /* Lottie */,
 				1CCDDB25287A807100521785 /* Alamofire */,
 				1CCDDB28287A808300521785 /* AlamofireImage */,
+				1CCDDB2B287A859A00521785 /* SwiftSoup */,
 			);
 			productName = Qiita;
 			productReference = 1C0C78E62879429800ED0759 /* Qiita.app */;
@@ -302,6 +316,7 @@
 				1CCDDB212879C42400521785 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				1CCDDB24287A807100521785 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				1CCDDB27287A808300521785 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				1CCDDB2A287A859900521785 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
 			productRefGroup = 1C0C78E72879429800ED0759 /* Products */;
 			projectDirPath = "";
@@ -349,6 +364,7 @@
 			files = (
 				1CCDDB032879627A00521785 /* NavigationViewController.swift in Sources */,
 				1CCDDB0D28797F4700521785 /* UIColor+.swift in Sources */,
+				1CCDDB2F287C45DE00521785 /* CSRFToken.swift in Sources */,
 				1C0C78EE2879429800ED0759 /* HomeViewController.swift in Sources */,
 				1CCDDB1E2879B69400521785 /* WebViewController.swift in Sources */,
 				1CCDDAFD287950CF00521785 /* TimelineViewController.swift in Sources */,
@@ -734,6 +750,14 @@
 				kind = branch;
 			};
 		};
+		1CCDDB2A287A859900521785 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -756,6 +780,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1CCDDB27287A808300521785 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
+		};
+		1CCDDB2B287A859A00521785 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CCDDB2A287A859900521785 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
