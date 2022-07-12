@@ -16,6 +16,8 @@ class HomeViewController: UIViewController {
 
     var csrfToken: String = ""
 
+    var homeIndexPage: HomeIndexPage = HomeIndexPage(personalizedFeed: HomeIndexPagePersonalizedFeed(personalizedFeed: PersonalizedFeedPersonalizedFeed(edges: [])))
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ホーム"
@@ -41,14 +43,12 @@ class HomeViewController: UIViewController {
 //
 //                self.csrfToken = csrf_token.settings.csrfToken
 
-
-                let link: Elements = try doc.getElementsByClass("js-react-on-rails-component")
-                let elements: [Element] = link.array()
-
+                let component: Elements = try doc.getElementsByClass("js-react-on-rails-component")
+                let elements: [Element] = component.array()
                 for element in elements {
                     if try element.attr("data-component-name") == "HomeIndexPage" {
-                        let homeIndexPage = try JSONDecoder().decode(HomeIndexPage.self, from: element.data().data(using: .utf8)!)
-                        print(homeIndexPage)
+                        let json = try JSONDecoder().decode(HomeIndexPage.self, from: element.data().data(using: .utf8)!)
+                        self.homeIndexPage = json
                     }
                 }
 
