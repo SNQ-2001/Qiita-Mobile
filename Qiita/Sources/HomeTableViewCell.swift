@@ -28,7 +28,7 @@ class HomeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    public func setCell(profileImageURL: String, title: String, id: String, name: String, tags: [Organization], LGTM: String) {
+    public func setCell(profileImageURL: String, title: String, id: String, name: String, tags: [Organization], LGTM: Int) {
 
         // プロフィール画像を設定
         profileImage.af.setImage(
@@ -58,7 +58,7 @@ class HomeTableViewCell: UITableViewCell {
         }
         tagLabel.text = allTag
 
-        LGTMLabel.text = LGTM
+        LGTMLabel.text = String(LGTM)
     }
     
 }
