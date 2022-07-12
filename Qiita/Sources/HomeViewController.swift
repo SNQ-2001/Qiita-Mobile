@@ -17,25 +17,33 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     var csrfToken: String = ""
 
-    var homeIndexPage: HomeIndexPage = HomeIndexPage(personalizedFeed: HomeIndexPagePersonalizedFeed(personalizedFeed: PersonalizedFeedPersonalizedFeed(edges: [])))
+    var homeIndexPage: HomeIndexPage = HomeIndexPage(personalizedFeed: HomeIndexPagePersonalizedFeed(personalizedFeed: PersonalizedFeedPersonalizedFeed(edges: []))) {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+
+    @IBOutlet var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ホーム"
 
+        tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
+        tableView.separatorInset = .zero
+
         getCsrfToken()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
-//        return homeIndexPage.personalizedFeed.personalizedFeed.edges.count
+        return homeIndexPage.personalizedFeed.personalizedFeed.edges.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-
-        cell.textLabel?.text = "あいうえお"
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell") as? HomeTableViewCell {
+            return cell
+        }
+        return UITableViewCell()
     }
 
     func getCsrfToken() {
