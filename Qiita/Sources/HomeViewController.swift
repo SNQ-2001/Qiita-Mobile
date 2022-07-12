@@ -11,7 +11,8 @@ import SwiftSoup
 import KeychainAccess
 import SwiftUI
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
     let keychain = Keychain(service: "com.Qiita")
 
     var csrfToken: String = ""
@@ -23,6 +24,18 @@ class HomeViewController: UIViewController {
         title = "ホーム"
 
         getCsrfToken()
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
+//        return homeIndexPage.personalizedFeed.personalizedFeed.edges.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+
+        cell.textLabel?.text = "あいうえお"
+        return cell
     }
 
     func getCsrfToken() {
