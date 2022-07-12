@@ -110,6 +110,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="LGTMLabel" destination="uSE-Ph-MrN" id="MJ2-KK-HPb"/>
+                <outlet property="nameLabel" destination="gTp-dm-4Ct" id="IQ1-ki-HRk"/>
+                <outlet property="profileImage" destination="jll-Gp-BkF" id="8CT-nN-aHx"/>
+                <outlet property="publishedAtLabel" destination="AOW-CD-7Q1" id="mD7-AP-EhS"/>
+                <outlet property="tagLabel" destination="2sU-KU-F8V" id="UTv-kz-5E2"/>
+                <outlet property="titleLabel" destination="t6t-ma-EpO" id="wbY-S4-laV"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
         </tableViewCell>
     </objects>
