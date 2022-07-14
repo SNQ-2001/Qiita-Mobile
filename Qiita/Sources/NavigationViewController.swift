@@ -8,6 +8,14 @@
 import UIKit
 
 class NavigationViewController: UINavigationController {
+    
+    var qiitaIcon: UIImageView = {
+        let icon = UIImageView(image: UIImage(named: "logo-background-color"))
+        icon.translatesAutoresizingMaskIntoConstraints = false
+        icon.contentMode = .scaleAspectFit
+        return icon
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +25,9 @@ class NavigationViewController: UINavigationController {
         UINavigationBar.appearance().compactAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         
+        // NavigationBarに画像を設定
+        navigationItem.titleView = qiitaIcon
+
     }
 
 }

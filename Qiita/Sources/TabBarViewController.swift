@@ -9,13 +9,6 @@ import UIKit
 
 class TabBarViewController: UITabBarController {
 
-    var qiitaIcon: UIImageView = {
-        let icon = UIImageView(image: UIImage(named: "logo-background-color"))
-        icon.translatesAutoresizingMaskIntoConstraints = false
-        icon.contentMode = .scaleAspectFit
-        return icon
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,9 +19,6 @@ class TabBarViewController: UITabBarController {
             UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
             UITabBar.appearance().standardAppearance = tabBarAppearance
         }
-
-        // NavigationBarに画像を設定
-        navigationItem.titleView = qiitaIcon
 
         // Tabが選択された時の色を指定
         tabBar.tintColor = UIColor(red: 85/255, green: 197/255, blue: 0/255, alpha: 1.0)
