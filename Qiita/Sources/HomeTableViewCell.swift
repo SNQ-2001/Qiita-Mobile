@@ -56,7 +56,9 @@ class HomeTableViewCell: UITableViewCell {
                 allTag += "\(tags[tag].name), "
             }
         }
-        tagLabel.text = allTag
+
+        tagLabel.font = UIFont(name: "FontAwesome", size: 14)
+        tagLabel.text = String.FontAwesome(unicode: "f02b") + " " + allTag
 
         LGTMLabel.text = String(LGTM)
     }
