@@ -43,7 +43,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell") as? HomeTableViewCell {
             let node = homeIndexPage.personalizedFeed.personalizedFeed.edges[indexPath.row].node
-            cell.setCell(profileImageURL: node.author.profileImageURL, title: node.title, id: node.author.urlName, name: node.author.name, tags: node.tags, LGTM: node.likesCount)
+            cell.setCell(
+                profileImageURL: node.author.profileImageURL,
+                title: node.title,
+                id: node.author.urlName,
+                name: node.author.name,
+                tags: node.tags,
+                LGTM: node.likesCount
+            )
             return cell
         }
         return UITableViewCell()

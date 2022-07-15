@@ -36,6 +36,7 @@
 		1CCDDB35287D0AC900521785 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CCDDB33287D0AC900521785 /* HomeTableViewCell.xib */; };
 		1CCDDC60287FC80200521785 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1CCDDC5F287FC80100521785 /* FontAwesome.otf */; };
 		1CCDDC62287FC92C00521785 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC61287FC92C00521785 /* String+.swift */; };
+		1CCDDC652881004200521785 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC642881004100521785 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		1CCDDB33287D0AC900521785 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		1CCDDC5F287FC80100521785 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 		1CCDDC61287FC92C00521785 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		1CCDDC642881004100521785 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				1CCDDB32287D0AC800521785 /* HomeTableViewCell.swift */,
 				1CCDDAFC287950CF00521785 /* TimelineViewController.swift */,
 				1CCDDAFE2879520E00521785 /* TrendViewController.swift */,
+				1CCDDC632880FFD000521785 /* ViewModel */,
 				1CCDDB2D287C454A00521785 /* Model */,
 				1CCDDB0E28797FA900521785 /* xib */,
 				1CCDDB0B28797F3400521785 /* Extensions */,
@@ -229,6 +232,14 @@
 				1CCDDB30287C781C00521785 /* HomeIndexPage.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1CCDDC632880FFD000521785 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1CCDDC642881004100521785 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +403,7 @@
 				1CCDDB09287974EF00521785 /* TabBarViewController.swift in Sources */,
 				1C0C78EA2879429800ED0759 /* AppDelegate.swift in Sources */,
 				1CCDDC62287FC92C00521785 /* String+.swift in Sources */,
+				1CCDDC652881004200521785 /* HomeViewModel.swift in Sources */,
 				1C0C78EC2879429800ED0759 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
