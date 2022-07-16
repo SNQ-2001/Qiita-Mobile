@@ -21,7 +21,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         tableView.separatorInset = .zero
 
-        initViewModel()
+        initHomeViewModel()
 
         homeViewModel.requestHomeIndexPage()
     }
@@ -46,7 +46,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return UITableViewCell()
     }
 
-    func initViewModel() {
+    func initHomeViewModel() {
         self.homeViewModel.reloadHandler = { [weak self] in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
