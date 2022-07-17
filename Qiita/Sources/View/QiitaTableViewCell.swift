@@ -28,7 +28,7 @@ class QiitaTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    public func setCell(profileImageURL: String, title: String, id: String, name: String, tags: [Organization], LGTM: Int) {
+    public func setCell(profileImageURL: String, title: String, id: String, name: String, tags: [Tag], LGTM: Int) {
 
         // プロフィール画像を設定
         profileImage.af.setImage(
