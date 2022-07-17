@@ -136,7 +136,7 @@
                     <tabBarItem key="tabBarItem" title="ホーム" image="house" catalog="system" id="udf-q3-Ghm"/>
                     <navigationItem key="navigationItem" id="UqV-6j-Z61"/>
                     <connections>
-                        <outlet property="tableView" destination="1Vn-sS-9lQ" id="yiP-VX-vQJ"/>
+                        <outlet property="homeTableView" destination="1Vn-sS-9lQ" id="vh3-If-qAt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -150,14 +150,43 @@
                     <view key="view" contentMode="scaleToFill" id="qVy-Pt-NYv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Seh-kN-jkg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1FW-fX-cYu">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1FW-fX-cYu" id="tZa-AG-9rh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jFh-IU-EPb" id="kXl-QB-3wd"/>
+                                    <outlet property="delegate" destination="jFh-IU-EPb" id="xd4-nb-k8k"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iey-d9-bdJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Seh-kN-jkg" firstAttribute="bottom" secondItem="iey-d9-bdJ" secondAttribute="bottom" id="0Ih-7A-vpq"/>
+                            <constraint firstItem="Seh-kN-jkg" firstAttribute="leading" secondItem="iey-d9-bdJ" secondAttribute="leading" id="ZeS-wF-XH4"/>
+                            <constraint firstItem="Seh-kN-jkg" firstAttribute="top" secondItem="qVy-Pt-NYv" secondAttribute="top" id="erL-PX-VuU"/>
+                            <constraint firstItem="Seh-kN-jkg" firstAttribute="trailing" secondItem="iey-d9-bdJ" secondAttribute="trailing" id="fyI-EA-gFK"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="タイムライン" image="clock" catalog="system" id="2WD-7I-bqV"/>
+                    <connections>
+                        <outlet property="timelineTableView" destination="Seh-kN-jkg" id="bfv-bz-9lp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5g-MI-1N8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="902"/>
+            <point key="canvasLocation" x="1437.68115942029" y="901.33928571428567"/>
         </scene>
         <!--トレンド-->
         <scene sceneID="5jc-Qp-ExK">

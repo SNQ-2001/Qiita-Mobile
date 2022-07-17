@@ -11,15 +11,15 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     let homeViewModel = HomeViewModel()
 
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var homeTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ホーム"
 
-        tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
+        homeTableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeTableViewCell")
 
-        tableView.separatorInset = .zero
+        homeTableView.separatorInset = .zero
 
         initHomeViewModel()
 
@@ -49,7 +49,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func initHomeViewModel() {
         self.homeViewModel.reloadHandler = { [weak self] in
             DispatchQueue.main.async {
-                self?.tableView.reloadData()
+                self?.homeTableView.reloadData()
             }
         }
     }

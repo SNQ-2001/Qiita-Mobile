@@ -8,8 +8,12 @@
 import UIKit
 import KeychainAccess
 
-class TimelineViewController: UIViewController {
+class TimelineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
     let keychain = Keychain(service: "com.Qiita")
+
+    @IBOutlet var timelineTableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "タイムライン"
@@ -25,8 +29,16 @@ class TimelineViewController: UIViewController {
 //        keychain["_td"] = nil
 //        keychain["general_banner_displayed"] = nil
 
+    }
 
-        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 7
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        cell.textLabel?.text = "あいうえお"
+        return cell
     }
 
 }
