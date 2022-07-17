@@ -65,7 +65,6 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
                     if try element.attr("data-component-name") == "HomeTimelinePage" {
                         let json = try JSONDecoder().decode(HomeTimelinePage.self, from: element.data().data(using: .utf8)!)
                         print(json)
-//                        self.homeIndexPage = json
                     }
                 }
 

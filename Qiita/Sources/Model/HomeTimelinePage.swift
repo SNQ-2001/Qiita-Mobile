@@ -10,8 +10,6 @@ import Foundation
 // MARK: - HomeTimelinePage
 struct HomeTimelinePage: Codable {
     let timeline: Timeline
-    let per: Int
-    let type: String
 }
 
 // MARK: - Timeline
@@ -28,7 +26,7 @@ struct HomeTimelinePageEdge: Codable {
 struct HomeTimelinePageNode: Codable {
     let likesCount: Int
     let linkURL: String
-    let publishedAt: Date?
+    let publishedAt: String?
     let title: String?
     let author: HomeTimelinePageAuthor?
     let organization: Organization?
