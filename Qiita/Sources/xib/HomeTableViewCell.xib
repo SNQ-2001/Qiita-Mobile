@@ -47,31 +47,45 @@
                         <color key="textColor" red="0.40392156862745099" green="0.40000000000000002" blue="0.40392156862745099" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6t-ma-EpO">
-                        <rect key="frame" x="15" y="53" width="290" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6t-ma-EpO" customClass="PaddingLabel" customModule="Qiita" customModuleProvider="target">
+                        <rect key="frame" x="15" y="52" width="290" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="topInset">
-                                <real key="value" value="3"/>
+                                <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
-                                <real key="value" value="3"/>
+                                <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
-                                <real key="value" value="1"/>
+                                <real key="value" value="0.0"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
                                 <real key="value" value="0.0"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="tag" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZP-jd-AYb">
-                        <rect key="frame" x="15" y="78" width="290" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="tag" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZP-jd-AYb" customClass="PaddingLabel" customModule="Qiita" customModuleProvider="target">
+                        <rect key="frame" x="15" y="79" width="290" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.40392156862745099" green="0.40000000000000002" blue="0.40392156862745099" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lgtm" translatesAutoresizingMaskIntoConstraints="NO" id="If0-WU-qEo">
                         <rect key="frame" x="15" y="102" width="15" height="15"/>
@@ -91,14 +105,14 @@
                 <constraints>
                     <constraint firstItem="jll-Gp-BkF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="3yz-hz-pby"/>
                     <constraint firstAttribute="bottom" secondItem="QdL-O8-2BX" secondAttribute="bottom" constant="14" id="5ZQ-F2-s2W"/>
-                    <constraint firstItem="If0-WU-qEo" firstAttribute="top" secondItem="KZP-jd-AYb" secondAttribute="bottom" constant="8" id="90X-Jv-UzU"/>
+                    <constraint firstItem="If0-WU-qEo" firstAttribute="top" secondItem="KZP-jd-AYb" secondAttribute="bottom" constant="7" id="90X-Jv-UzU"/>
                     <constraint firstItem="KZP-jd-AYb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="A3U-WX-8bi"/>
                     <constraint firstAttribute="trailing" secondItem="t6t-ma-EpO" secondAttribute="trailing" constant="15" id="CyQ-D2-rrz"/>
                     <constraint firstAttribute="trailing" secondItem="KZP-jd-AYb" secondAttribute="trailing" constant="15" id="Dye-tr-9u4"/>
                     <constraint firstAttribute="trailing" secondItem="gTp-dm-4Ct" secondAttribute="trailing" constant="15" id="Gsu-5e-aqA"/>
                     <constraint firstAttribute="trailing" secondItem="AOW-CD-7Q1" secondAttribute="trailing" constant="15" id="IK1-cq-LD2"/>
-                    <constraint firstItem="KZP-jd-AYb" firstAttribute="top" secondItem="t6t-ma-EpO" secondAttribute="bottom" constant="8" id="JZn-mN-A8b"/>
-                    <constraint firstItem="t6t-ma-EpO" firstAttribute="top" secondItem="AOW-CD-7Q1" secondAttribute="bottom" constant="8" id="Kub-SQ-0Mv"/>
+                    <constraint firstItem="KZP-jd-AYb" firstAttribute="top" secondItem="t6t-ma-EpO" secondAttribute="bottom" constant="6" id="JZn-mN-A8b"/>
+                    <constraint firstItem="t6t-ma-EpO" firstAttribute="top" secondItem="AOW-CD-7Q1" secondAttribute="bottom" constant="7" id="Kub-SQ-0Mv"/>
                     <constraint firstItem="AOW-CD-7Q1" firstAttribute="leading" secondItem="jll-Gp-BkF" secondAttribute="trailing" constant="5" id="ZLE-b9-qs4"/>
                     <constraint firstItem="AOW-CD-7Q1" firstAttribute="top" secondItem="gTp-dm-4Ct" secondAttribute="bottom" constant="1" id="b86-cf-VmF"/>
                     <constraint firstItem="gTp-dm-4Ct" firstAttribute="leading" secondItem="jll-Gp-BkF" secondAttribute="trailing" constant="5" id="dvz-nl-FYT"/>
@@ -124,7 +138,7 @@
     </objects>
     <designables>
         <designable name="t6t-ma-EpO">
-            <size key="intrinsicContentSize" width="73.5" height="21.5"/>
+            <size key="intrinsicContentSize" width="73.5" height="23.5"/>
         </designable>
     </designables>
     <resources>
