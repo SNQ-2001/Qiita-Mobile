@@ -32,11 +32,12 @@
 		1CCDDB2C287A859A00521785 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 1CCDDB2B287A859A00521785 /* SwiftSoup */; };
 		1CCDDB2F287C45DE00521785 /* CSRFToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB2E287C45DE00521785 /* CSRFToken.swift */; };
 		1CCDDB31287C781D00521785 /* HomeIndexPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB30287C781C00521785 /* HomeIndexPage.swift */; };
-		1CCDDB34287D0AC900521785 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB32287D0AC800521785 /* HomeTableViewCell.swift */; };
-		1CCDDB35287D0AC900521785 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CCDDB33287D0AC900521785 /* HomeTableViewCell.xib */; };
+		1CCDDB34287D0AC900521785 /* QiitaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDB32287D0AC800521785 /* QiitaTableViewCell.swift */; };
+		1CCDDB35287D0AC900521785 /* QiitaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CCDDB33287D0AC900521785 /* QiitaTableViewCell.xib */; };
 		1CCDDC60287FC80200521785 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1CCDDC5F287FC80100521785 /* FontAwesome.otf */; };
 		1CCDDC62287FC92C00521785 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC61287FC92C00521785 /* String+.swift */; };
 		1CCDDC652881004200521785 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC642881004100521785 /* HomeViewModel.swift */; };
+		1CCDDC822883F85F00521785 /* HomeTimelinePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC812883F85F00521785 /* HomeTimelinePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,11 +82,12 @@
 		1CCDDB1F2879C3E700521785 /* signin_background.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signin_background.json; sourceTree = "<group>"; };
 		1CCDDB2E287C45DE00521785 /* CSRFToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSRFToken.swift; sourceTree = "<group>"; };
 		1CCDDB30287C781C00521785 /* HomeIndexPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIndexPage.swift; sourceTree = "<group>"; };
-		1CCDDB32287D0AC800521785 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		1CCDDB33287D0AC900521785 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		1CCDDB32287D0AC800521785 /* QiitaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaTableViewCell.swift; sourceTree = "<group>"; };
+		1CCDDB33287D0AC900521785 /* QiitaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QiitaTableViewCell.xib; sourceTree = "<group>"; };
 		1CCDDC5F287FC80100521785 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 		1CCDDC61287FC92C00521785 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		1CCDDC642881004100521785 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1CCDDC812883F85F00521785 /* HomeTimelinePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTimelinePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				1C0C78EF2879429800ED0759 /* Main.storyboard */,
-				1CCDDB33287D0AC900521785 /* HomeTableViewCell.xib */,
+				1CCDDB33287D0AC900521785 /* QiitaTableViewCell.xib */,
 				1C0C78F42879429A00ED0759 /* LaunchScreen.storyboard */,
 			);
 			path = xib;
@@ -222,6 +224,7 @@
 			children = (
 				1CCDDB2E287C45DE00521785 /* CSRFToken.swift */,
 				1CCDDB30287C781C00521785 /* HomeIndexPage.swift */,
+				1CCDDC812883F85F00521785 /* HomeTimelinePage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,9 +245,9 @@
 				1CCDDB022879627A00521785 /* NavigationViewController.swift */,
 				1CCDDB08287974EF00521785 /* TabBarViewController.swift */,
 				1C0C78ED2879429800ED0759 /* HomeViewController.swift */,
-				1CCDDB32287D0AC800521785 /* HomeTableViewCell.swift */,
 				1CCDDAFC287950CF00521785 /* TimelineViewController.swift */,
 				1CCDDAFE2879520E00521785 /* TrendViewController.swift */,
+				1CCDDB32287D0AC800521785 /* QiitaTableViewCell.swift */,
 				1CCDDB0E28797FA900521785 /* xib */,
 			);
 			path = View;
@@ -372,7 +375,7 @@
 				1CCDDB202879C3E800521785 /* signin_background.json in Resources */,
 				1CCDDC60287FC80200521785 /* FontAwesome.otf in Resources */,
 				1C0C78F32879429A00ED0759 /* Assets.xcassets in Resources */,
-				1CCDDB35287D0AC900521785 /* HomeTableViewCell.xib in Resources */,
+				1CCDDB35287D0AC900521785 /* QiitaTableViewCell.xib in Resources */,
 				1C0C78F12879429800ED0759 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,7 +403,7 @@
 			files = (
 				1CCDDB032879627A00521785 /* NavigationViewController.swift in Sources */,
 				1CCDDB0D28797F4700521785 /* UIColor+.swift in Sources */,
-				1CCDDB34287D0AC900521785 /* HomeTableViewCell.swift in Sources */,
+				1CCDDB34287D0AC900521785 /* QiitaTableViewCell.swift in Sources */,
 				1CCDDB2F287C45DE00521785 /* CSRFToken.swift in Sources */,
 				1C0C78EE2879429800ED0759 /* HomeViewController.swift in Sources */,
 				1CCDDB1E2879B69400521785 /* WebViewController.swift in Sources */,
@@ -412,6 +415,7 @@
 				1C0C78EA2879429800ED0759 /* AppDelegate.swift in Sources */,
 				1CCDDC62287FC92C00521785 /* String+.swift in Sources */,
 				1CCDDC652881004200521785 /* HomeViewModel.swift in Sources */,
+				1CCDDC822883F85F00521785 /* HomeTimelinePage.swift in Sources */,
 				1C0C78EC2879429800ED0759 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

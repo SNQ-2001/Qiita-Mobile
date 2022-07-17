@@ -8,7 +8,7 @@
 import UIKit
 import AlamofireImage
 
-class HomeTableViewCell: UITableViewCell {
+class QiitaTableViewCell: UITableViewCell {
 
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var nameLabel: UILabel!
@@ -28,12 +28,13 @@ class HomeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    public func setCell(profileImageURL: String, title: String, id: String, name: String, tags: [Organization], LGTM: Int) {
+    public func setCell(profileImageURL: String, title: String, id: String, name: String, tags: [Tag], LGTM: Int) {
 
         // プロフィール画像を設定
+        guard let url = URL(string: profileImageURL) else { return }
         profileImage.af.setImage(
-            withURL: URL(string: profileImageURL)!,
-            placeholderImage: UIImage(named: "twitter_LdZznZea_400x400"),
+            withURL: url,
+            placeholderImage: UIImage(named: "default"),
             imageTransition: .crossDissolve(0.5)
         )
 

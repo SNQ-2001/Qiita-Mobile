@@ -24,24 +24,24 @@ struct HomeIndexPagePersonalizedFeed: Codable {
 
 // MARK: - PersonalizedFeedPersonalizedFeed
 struct PersonalizedFeedPersonalizedFeed: Codable {
-    let edges: [Edge]
+    let edges: [HomeIndexPageEdge]
 }
 
 // MARK: - Edge
-struct Edge: Codable {
-    let node: Node
+struct HomeIndexPageEdge: Codable {
+    let node: HomeIndexPageNode
 }
 
 // MARK: - Node
-struct Node: Codable {
+struct HomeIndexPageNode: Codable {
     let encryptedID: String
     let likesCount: Int
     let linkURL: String
     let publishedAt: String
     let title: String
-    let author: Author
+    let author: HomeIndexPageAuthor
     let organization: Organization?
-    let tags: [Organization]
+    let tags: [Tag]
 
     enum CodingKeys: String, CodingKey {
         case encryptedID = "encryptedId"
@@ -52,7 +52,7 @@ struct Node: Codable {
 }
 
 // MARK: - Author
-struct Author: Codable {
+struct HomeIndexPageAuthor: Codable {
     let profileImageURL: String
     let urlName, name: String
 
@@ -64,5 +64,10 @@ struct Author: Codable {
 
 // MARK: - Organization
 struct Organization: Codable {
+    let name, urlName: String
+}
+
+// MARK: - Tag
+struct Tag: Codable {
     let name, urlName: String
 }
