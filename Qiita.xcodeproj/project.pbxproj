@@ -182,17 +182,9 @@
 		1C0C791C287942E500ED0759 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1CCDDB182879917C00521785 /* SignInViewController.swift */,
-				1CCDDB1D2879B69400521785 /* WebViewController.swift */,
-				1CCDDB022879627A00521785 /* NavigationViewController.swift */,
-				1CCDDB08287974EF00521785 /* TabBarViewController.swift */,
-				1C0C78ED2879429800ED0759 /* HomeViewController.swift */,
-				1CCDDB32287D0AC800521785 /* HomeTableViewCell.swift */,
-				1CCDDAFC287950CF00521785 /* TimelineViewController.swift */,
-				1CCDDAFE2879520E00521785 /* TrendViewController.swift */,
+				1CCDDC802883E87700521785 /* View */,
 				1CCDDC632880FFD000521785 /* ViewModel */,
 				1CCDDB2D287C454A00521785 /* Model */,
-				1CCDDB0E28797FA900521785 /* xib */,
 				1CCDDB0B28797F3400521785 /* Extensions */,
 			);
 			path = Sources;
@@ -240,6 +232,22 @@
 				1CCDDC642881004100521785 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1CCDDC802883E87700521785 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1CCDDB182879917C00521785 /* SignInViewController.swift */,
+				1CCDDB1D2879B69400521785 /* WebViewController.swift */,
+				1CCDDB022879627A00521785 /* NavigationViewController.swift */,
+				1CCDDB08287974EF00521785 /* TabBarViewController.swift */,
+				1C0C78ED2879429800ED0759 /* HomeViewController.swift */,
+				1CCDDB32287D0AC800521785 /* HomeTableViewCell.swift */,
+				1CCDDAFC287950CF00521785 /* TimelineViewController.swift */,
+				1CCDDAFE2879520E00521785 /* TrendViewController.swift */,
+				1CCDDB0E28797FA900521785 /* xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
