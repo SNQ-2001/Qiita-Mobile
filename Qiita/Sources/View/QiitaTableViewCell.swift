@@ -8,7 +8,7 @@
 import UIKit
 import AlamofireImage
 
-class HomeTableViewCell: UITableViewCell {
+class QiitaTableViewCell: UITableViewCell {
 
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var nameLabel: UILabel!
