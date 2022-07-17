@@ -35,9 +35,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let node = homeViewModel.homeIndexPage.personalizedFeed.personalizedFeed.edges[indexPath.row].node
             cell.setCell(
                 profileImageURL: node.author.profileImageURL,
-                title: node.title,
                 id: node.author.urlName,
                 name: node.author.name,
+                publishedAt: node.publishedAt,
+                title: node.title,
                 tags: node.tags,
                 LGTM: node.likesCount
             )

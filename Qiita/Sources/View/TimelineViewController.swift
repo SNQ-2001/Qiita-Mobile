@@ -53,9 +53,10 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
             let node = homeTimelinePage.timeline.edges[indexPath.row].node
             cell.setCell(
                 profileImageURL: node.author?.profileImageURL ?? "",
-                title: node.title ?? "???",
                 id: node.author?.urlName ?? "???",
                 name: node.author?.name ?? "???",
+                publishedAt: node.publishedAt ?? "???",
+                title: node.title ?? "???",
                 tags: node.tags ?? [],
                 LGTM: node.likesCount
             )

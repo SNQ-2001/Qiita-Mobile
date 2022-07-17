@@ -28,7 +28,7 @@ class QiitaTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    public func setCell(profileImageURL: String, title: String, id: String, name: String, tags: [Tag], LGTM: Int) {
+    public func setCell(profileImageURL: String, id: String, name: String, publishedAt: String, title: String, tags: [Tag], LGTM: Int) {
 
         // プロフィール画像を設定
         guard let url = URL(string: profileImageURL) else { return }
@@ -38,15 +38,22 @@ class QiitaTableViewCell: UITableViewCell {
             imageTransition: .crossDissolve(0.5)
         )
 
-        // タイトルを設定
-        titleLabel.text = title
-
         // idを設定
         if name == "" {
             nameLabel.text = "@\(id)"
         } else {
             nameLabel.text = "@\(id)（\(name)）"
         }
+
+        // 投稿日を設定
+        guard let publishedData = stringToDate(string: publishedAt.match(#"[0-9]{4}-[0-9]{2}-[0-9]{2}"#)[0], format: "yyyy-MM-dd") else { return }
+
+        guard let publishedString = dateToString(date: publishedData, format: "yyyy年MM月dd日") else { return }
+
+        publishedAtLabel.text = "\(publishedString)"
+
+        // タイトルを設定
+        titleLabel.text = title
 
         // タグを設定
         var allTag: String = ""
@@ -63,5 +70,18 @@ class QiitaTableViewCell: UITableViewCell {
 
         LGTMLabel.text = String(LGTM)
     }
-    
+
+    func dateToString(date: Date, format: String) -> String? {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.dateFormat = format
+        return formatter.string(from: date)
+    }
+
+    func stringToDate(string: String, format: String) -> Date? {
+        let formatter = DateFormatter()
+        formatter.locale = .current
+        formatter.dateFormat = format
+        return formatter.date(from: string)
+    }
 }
