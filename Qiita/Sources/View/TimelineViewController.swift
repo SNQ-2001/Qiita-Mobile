@@ -29,6 +29,8 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
 //        keychain["_td"] = nil
 //        keychain["general_banner_displayed"] = nil
 
+        timelineTableView.separatorInset = .zero
+
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
