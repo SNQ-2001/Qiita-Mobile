@@ -39,6 +39,7 @@
 		1CCDDC652881004200521785 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC642881004100521785 /* HomeViewModel.swift */; };
 		1CCDDC822883F85F00521785 /* HomeTimelinePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC812883F85F00521785 /* HomeTimelinePage.swift */; };
 		1CCDDC842885351100521785 /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC832885351000521785 /* TimelineViewModel.swift */; };
+		1CCDDC8628853B8900521785 /* HomeTrendPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC8528853B8800521785 /* HomeTrendPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		1CCDDC642881004100521785 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1CCDDC812883F85F00521785 /* HomeTimelinePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTimelinePage.swift; sourceTree = "<group>"; };
 		1CCDDC832885351000521785 /* TimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
+		1CCDDC8528853B8800521785 /* HomeTrendPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrendPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 				1CCDDB2E287C45DE00521785 /* CSRFToken.swift */,
 				1CCDDB30287C781C00521785 /* HomeIndexPage.swift */,
 				1CCDDC812883F85F00521785 /* HomeTimelinePage.swift */,
+				1CCDDC8528853B8800521785 /* HomeTrendPage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CCDDB032879627A00521785 /* NavigationViewController.swift in Sources */,
+				1CCDDC8628853B8900521785 /* HomeTrendPage.swift in Sources */,
 				1CCDDB0D28797F4700521785 /* UIColor+.swift in Sources */,
 				1CCDDB34287D0AC900521785 /* QiitaTableViewCell.swift in Sources */,
 				1CCDDB2F287C45DE00521785 /* CSRFToken.swift in Sources */,

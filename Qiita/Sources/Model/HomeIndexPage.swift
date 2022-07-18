@@ -39,7 +39,7 @@ struct HomeIndexPageNode: Codable {
     let linkURL: String
     let publishedAt: String
     let title: String
-    let author: HomeIndexPageAuthor
+    let author: Author
     let organization: Organization?
     let tags: [Tag]
 
@@ -52,7 +52,7 @@ struct HomeIndexPageNode: Codable {
 }
 
 // MARK: - Author
-struct HomeIndexPageAuthor: Codable {
+struct Author: Codable {
     let profileImageURL: String
     let urlName, name: String
 

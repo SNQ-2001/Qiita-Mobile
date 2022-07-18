@@ -155,7 +155,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1FW-fX-cYu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1FW-fX-cYu" customClass="QiitaTableViewCell" customModule="Qiita" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1FW-fX-cYu" id="tZa-AG-9rh">
@@ -195,14 +195,43 @@
                     <view key="view" contentMode="scaleToFill" id="UfH-J1-LGg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hyk-m6-7a4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NeB-WW-n5e" customClass="QiitaTableViewCell" customModule="Qiita" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NeB-WW-n5e" id="C5j-UH-zc6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hEo-gC-Ivv" id="SUg-RO-Jay"/>
+                                    <outlet property="delegate" destination="hEo-gC-Ivv" id="JET-7s-JPU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Quj-34-Iuo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hyk-m6-7a4" firstAttribute="bottom" secondItem="Quj-34-Iuo" secondAttribute="bottom" id="62Y-2d-ORq"/>
+                            <constraint firstItem="hyk-m6-7a4" firstAttribute="trailing" secondItem="Quj-34-Iuo" secondAttribute="trailing" id="6o0-Rn-P7A"/>
+                            <constraint firstItem="hyk-m6-7a4" firstAttribute="top" secondItem="UfH-J1-LGg" secondAttribute="top" id="Ee0-oS-eGP"/>
+                            <constraint firstItem="hyk-m6-7a4" firstAttribute="leading" secondItem="Quj-34-Iuo" secondAttribute="leading" id="NPf-PE-oZx"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="トレンド" image="chart.line.uptrend.xyaxis" catalog="system" id="PE2-FN-M2q"/>
+                    <connections>
+                        <outlet property="trendTableView" destination="hyk-m6-7a4" id="HDI-lF-lnr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODE-E6-rGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="1650"/>
+            <point key="canvasLocation" x="1437.68115942029" y="1650"/>
         </scene>
     </scenes>
     <resources>

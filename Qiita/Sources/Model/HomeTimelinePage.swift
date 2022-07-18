@@ -38,15 +38,3 @@ struct HomeTimelinePageNode: Codable {
         case publishedAt, title, author, organization, tags
     }
 }
-
-
-// MARK: - Author
-struct HomeTimelinePageAuthor: Codable {
-    let profileImageURL: String
-    let urlName, name: String
-
-    enum CodingKeys: String, CodingKey {
-        case profileImageURL = "profileImageUrl"
-        case urlName, name
-    }
-}
