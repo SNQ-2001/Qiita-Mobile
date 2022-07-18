@@ -44,8 +44,9 @@ class TimelineViewModel: NSObject {
                 let elements: [Element] = component.array()
                 for element in elements {
                     if try element.attr("data-component-name") == "HomeTimelinePage" {
-                        let json = try JSONDecoder().decode(HomeTimelinePage.self, from: element.data().data(using: .utf8)!)
-                        self.homeTimelinePage = json
+                        guard let elementData = element.data().data(using: .utf8) else { return }
+                        let timeline = try JSONDecoder().decode(HomeTimelinePage.self, from: elementData)
+                        self.homeTimelinePage = timeline
                     }
                 }
             } catch Exception.Error(_, let message) {

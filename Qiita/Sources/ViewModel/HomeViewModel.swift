@@ -50,8 +50,9 @@ class HomeViewModel: NSObject {
                 let elements: [Element] = component.array()
                 for element in elements {
                     if try element.attr("data-component-name") == "HomeIndexPage" {
-                        let json = try JSONDecoder().decode(HomeIndexPage.self, from: element.data().data(using: .utf8)!)
-                        self.homeIndexPage = json
+                        guard let elementData = element.data().data(using: .utf8) else { return }
+                        let index = try JSONDecoder().decode(HomeIndexPage.self, from: elementData)
+                        self.homeIndexPage = index
                     }
                 }
 

@@ -62,8 +62,9 @@ class TrendViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let elements: [Element] = component.array()
                 for element in elements {
                     if try element.attr("data-component-name") == "HomeTrendPage" {
-                        let json = try JSONDecoder().decode(HomeTrendPage.self, from: element.data().data(using: .utf8)!)
-                        print(json)
+                        guard let elementData = element.data().data(using: .utf8) else { return }
+                        let trend = try JSONDecoder().decode(HomeTrendPage.self, from: elementData)
+                        print(trend)
                     }
                 }
             } catch Exception.Error(_, let message) {
