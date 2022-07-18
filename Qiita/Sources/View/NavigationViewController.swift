@@ -18,6 +18,8 @@ class NavigationViewController: UINavigationController {
         UINavigationBar.appearance().compactAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
 
+        navigationBar.tintColor = .white
+
     }
 
 }
