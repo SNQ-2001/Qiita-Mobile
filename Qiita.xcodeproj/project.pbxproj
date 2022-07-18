@@ -41,6 +41,7 @@
 		1CCDDC842885351100521785 /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC832885351000521785 /* TimelineViewModel.swift */; };
 		1CCDDC8628853B8900521785 /* HomeTrendPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC8528853B8800521785 /* HomeTrendPage.swift */; };
 		1CCDDC882885405500521785 /* TrendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC872885405500521785 /* TrendViewModel.swift */; };
+		1CCDDC8A2885468800521785 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC892885468800521785 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		1CCDDC832885351000521785 /* TimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
 		1CCDDC8528853B8800521785 /* HomeTrendPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrendPage.swift; sourceTree = "<group>"; };
 		1CCDDC872885405500521785 /* TrendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewModel.swift; sourceTree = "<group>"; };
+		1CCDDC892885468800521785 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 				1CCDDAFC287950CF00521785 /* TimelineViewController.swift */,
 				1CCDDAFE2879520E00521785 /* TrendViewController.swift */,
 				1CCDDB32287D0AC800521785 /* QiitaTableViewCell.swift */,
+				1CCDDC892885468800521785 /* DetailViewController.swift */,
 				1CCDDB0E28797FA900521785 /* xib */,
 			);
 			path = View;
@@ -417,6 +420,7 @@
 				1CCDDB2F287C45DE00521785 /* CSRFToken.swift in Sources */,
 				1C0C78EE2879429800ED0759 /* HomeViewController.swift in Sources */,
 				1CCDDB1E2879B69400521785 /* WebViewController.swift in Sources */,
+				1CCDDC8A2885468800521785 /* DetailViewController.swift in Sources */,
 				1CCDDAFD287950CF00521785 /* TimelineViewController.swift in Sources */,
 				1CCDDC842885351100521785 /* TimelineViewModel.swift in Sources */,
 				1CCDDAFF2879520E00521785 /* TrendViewController.swift in Sources */,

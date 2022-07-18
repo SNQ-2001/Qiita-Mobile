@@ -116,6 +116,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="wAo-18-SB9" kind="show" identifier="DetailSegue" id="7jf-Mb-9YZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -232,6 +235,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODE-E6-rGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1437.68115942029" y="1650"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="DcL-xY-QoA">
+            <objects>
+                <viewController id="wAo-18-SB9" customClass="DetailViewController" customModule="Qiita" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a37-DY-v9c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4PT-Ar-cuO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fjC-Sb-iHV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agI-2s-P5o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2377" y="70"/>
         </scene>
     </scenes>
     <resources>

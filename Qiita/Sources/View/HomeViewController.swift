@@ -26,6 +26,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         homeViewModel.requestHomeIndexPage()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailSegue" {
+            guard let index = homeTableView.indexPathForSelectedRow?.row else { return }
+            let vc = segue.destination as! DetailViewController
+            vc.linkURL = homeViewModel.homeIndexPage.personalizedFeed.personalizedFeed.edges[index].node.linkURL
+        }
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return homeViewModel.homeIndexPage.personalizedFeed.personalizedFeed.edges.count
     }
@@ -45,6 +53,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             return cell
         }
         return UITableViewCell()
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "DetailSegue", sender: nil)
+        homeTableView.deselectRow(at: indexPath, animated: true)
     }
 
     func initHomeViewModel() {
