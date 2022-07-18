@@ -28,7 +28,7 @@ struct HomeTimelinePageNode: Codable {
     let linkURL: String
     let publishedAt: String?
     let title: String?
-    let author: HomeTimelinePageAuthor?
+    let author: Author?
     let organization: Organization?
     let tags: [Tag]?
 
@@ -36,17 +36,5 @@ struct HomeTimelinePageNode: Codable {
         case likesCount
         case linkURL = "linkUrl"
         case publishedAt, title, author, organization, tags
-    }
-}
-
-
-// MARK: - Author
-struct HomeTimelinePageAuthor: Codable {
-    let profileImageURL: String
-    let urlName, name: String
-
-    enum CodingKeys: String, CodingKey {
-        case profileImageURL = "profileImageUrl"
-        case urlName, name
     }
 }

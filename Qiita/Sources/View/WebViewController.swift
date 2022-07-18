@@ -36,21 +36,11 @@ class WebViewController: UIViewController {
             }
         })
     }
-    // _qiita_login_session
-    // _ga
-    // _gid
-    // __gads
-    // __gpi
-    // mp_17d24b448ca579c365d2d1057f3a1791_mixpanel
-    // user_session_key
-    // secure_token
-    // _td
-    // general_banner_displayed
+
     func getCookies() {
         webView.configuration.websiteDataStore.httpCookieStore.getAllCookies() { (cookies) in
             for eachcookie in cookies {
                 if eachcookie.domain.contains("qiita.com") {
-                    print("\(eachcookie.name): \(eachcookie.value)")
                     self.keychain["\(eachcookie.name)"] = "\(eachcookie.value)"
                 }
             }
@@ -61,3 +51,13 @@ class WebViewController: UIViewController {
         }
     }
 }
+// _qiita_login_session
+// _ga
+// _gid
+// __gads
+// __gpi
+// mp_17d24b448ca579c365d2d1057f3a1791_mixpanel
+// user_session_key
+// secure_token
+// _td
+// general_banner_displayed

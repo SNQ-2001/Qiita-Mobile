@@ -28,6 +28,7 @@ class HomeViewModel: NSObject {
         }
     }
 
+    /// ホームの取得
     public func requestHomeIndexPage() {
         guard let user_session_key = self.keychain["user_session_key"] else { return }
         guard let secure_token = self.keychain["secure_token"] else { return }
@@ -50,8 +51,9 @@ class HomeViewModel: NSObject {
                 let elements: [Element] = component.array()
                 for element in elements {
                     if try element.attr("data-component-name") == "HomeIndexPage" {
-                        let json = try JSONDecoder().decode(HomeIndexPage.self, from: element.data().data(using: .utf8)!)
-                        self.homeIndexPage = json
+                        guard let elementData = element.data().data(using: .utf8) else { return }
+                        let index = try JSONDecoder().decode(HomeIndexPage.self, from: elementData)
+                        self.homeIndexPage = index
                     }
                 }
 
