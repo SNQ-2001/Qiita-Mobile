@@ -14,6 +14,12 @@ class TrendViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     let keychain = Keychain(service: "com.Qiita")
 
+    var homeTrendPage: HomeTrendPage = HomeTrendPage(trend: Trend(edges: [])) {
+        didSet {
+            trendTableView.reloadData()
+        }
+    }
+
     @IBOutlet var trendTableView: UITableView!
 
     override func viewDidLoad() {
@@ -56,7 +62,8 @@ class TrendViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let elements: [Element] = component.array()
                 for element in elements {
                     if try element.attr("data-component-name") == "HomeTrendPage" {
-                        print(element.data())
+                        let json = try JSONDecoder().decode(HomeTrendPage.self, from: element.data().data(using: .utf8)!)
+                        print(json)
                     }
                 }
             } catch Exception.Error(_, let message) {

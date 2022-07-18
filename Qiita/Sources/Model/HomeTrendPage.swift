@@ -26,7 +26,7 @@ struct HomeTrendPageEdge: Codable {
 struct HomeTrendPageNode: Codable {
     let likesCount: Int
     let linkURL: String
-    let publishedAt: Date
+    let publishedAt: String
     let title: String
     let author: Author
     let organization: Organization?

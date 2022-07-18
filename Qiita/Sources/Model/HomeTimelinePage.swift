@@ -28,7 +28,7 @@ struct HomeTimelinePageNode: Codable {
     let linkURL: String
     let publishedAt: String?
     let title: String?
-    let author: HomeTimelinePageAuthor?
+    let author: Author?
     let organization: Organization?
     let tags: [Tag]?
 
