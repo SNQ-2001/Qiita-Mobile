@@ -12,13 +12,7 @@ import KeychainAccess
 
 class TrendViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let keychain = Keychain(service: "com.Qiita")
-
-    var homeTrendPage: HomeTrendPage = HomeTrendPage(trend: Trend(edges: [])) {
-        didSet {
-            trendTableView.reloadData()
-        }
-    }
+    let trendViewModel = TrendViewModel()
 
     @IBOutlet var trendTableView: UITableView!
 
@@ -30,16 +24,18 @@ class TrendViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         trendTableView.separatorInset = .zero
 
-        requestHomeTrendPage()
+        initTrendViewModel()
+
+        trendViewModel.requestHomeTrendPage()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return homeTrendPage.trend.edges.count
+        return trendViewModel.homeTrendPage.trend.edges.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "QiitaTableViewCell") as? QiitaTableViewCell {
-            let node = homeTrendPage.trend.edges[indexPath.row].node
+            let node = trendViewModel.homeTrendPage.trend.edges[indexPath.row].node
             cell.setCell(
                 profileImageURL: node.author.profileImageURL,
                 id: node.author.urlName,
@@ -54,35 +50,14 @@ class TrendViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return UITableViewCell()
     }
 
-    public func requestHomeTrendPage() {
-        guard let user_session_key = self.keychain["user_session_key"] else { return }
-        guard let secure_token = self.keychain["secure_token"] else { return }
-        guard let _qiita_login_session = self.keychain["_qiita_login_session"] else { return }
-        let headers: HTTPHeaders? = [
-            "cookie": "user_session_key=\(user_session_key); secure_token=\(secure_token); _qiita_login_session=\(_qiita_login_session)",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36"
-        ]
-        AF.request("https://qiita.com/trend", method: .get, headers: headers).responseData { response in
-            guard let data = response.data else { return }
-            do {
-                let html: String = String(data: data, encoding: .utf8) ?? ""
-                let doc: Document = try SwiftSoup.parse(html)
-                let component: Elements = try doc.getElementsByClass("js-react-on-rails-component")
-                let elements: [Element] = component.array()
-                for element in elements {
-                    if try element.attr("data-component-name") == "HomeTrendPage" {
-                        guard let elementData = element.data().data(using: .utf8) else { return }
-                        let trend = try JSONDecoder().decode(HomeTrendPage.self, from: elementData)
-                        self.homeTrendPage = trend
-                    }
-                }
-            } catch Exception.Error(_, let message) {
-                print(message)
-            } catch {
-                print("error")
+    func initTrendViewModel() {
+        self.trendViewModel.reloadHandler = { [weak self] in
+            DispatchQueue.main.async {
+                self?.trendTableView.reloadData()
             }
         }
     }
+
 }
 
 //keychain["_qiita_login_session"] = nil

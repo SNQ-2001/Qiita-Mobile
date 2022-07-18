@@ -28,6 +28,7 @@ class HomeViewModel: NSObject {
         }
     }
 
+    /// ホームの取得
     public func requestHomeIndexPage() {
         guard let user_session_key = self.keychain["user_session_key"] else { return }
         guard let secure_token = self.keychain["secure_token"] else { return }

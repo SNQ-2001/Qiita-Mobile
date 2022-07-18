@@ -24,9 +24,10 @@ class TimelineViewController: UIViewController, UITableViewDelegate, UITableView
 
         timelineTableView.separatorInset = .zero
 
+        initTimelineViewModel()
+
         timelineViewModel.requestHomeTimelinePage()
 
-        initTimelineViewModel()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

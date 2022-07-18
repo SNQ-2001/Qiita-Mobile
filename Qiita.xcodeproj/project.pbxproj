@@ -40,6 +40,7 @@
 		1CCDDC822883F85F00521785 /* HomeTimelinePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC812883F85F00521785 /* HomeTimelinePage.swift */; };
 		1CCDDC842885351100521785 /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC832885351000521785 /* TimelineViewModel.swift */; };
 		1CCDDC8628853B8900521785 /* HomeTrendPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC8528853B8800521785 /* HomeTrendPage.swift */; };
+		1CCDDC882885405500521785 /* TrendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC872885405500521785 /* TrendViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		1CCDDC812883F85F00521785 /* HomeTimelinePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTimelinePage.swift; sourceTree = "<group>"; };
 		1CCDDC832885351000521785 /* TimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
 		1CCDDC8528853B8800521785 /* HomeTrendPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrendPage.swift; sourceTree = "<group>"; };
+		1CCDDC872885405500521785 /* TrendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 			children = (
 				1CCDDC642881004100521785 /* HomeViewModel.swift */,
 				1CCDDC832885351000521785 /* TimelineViewModel.swift */,
+				1CCDDC872885405500521785 /* TrendViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				1CCDDC842885351100521785 /* TimelineViewModel.swift in Sources */,
 				1CCDDAFF2879520E00521785 /* TrendViewController.swift in Sources */,
 				1CCDDB192879917C00521785 /* SignInViewController.swift in Sources */,
+				1CCDDC882885405500521785 /* TrendViewModel.swift in Sources */,
 				1CCDDB31287C781D00521785 /* HomeIndexPage.swift in Sources */,
 				1CCDDB09287974EF00521785 /* TabBarViewController.swift in Sources */,
 				1C0C78EA2879429800ED0759 /* AppDelegate.swift in Sources */,
