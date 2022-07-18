@@ -38,6 +38,7 @@
 		1CCDDC62287FC92C00521785 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC61287FC92C00521785 /* String+.swift */; };
 		1CCDDC652881004200521785 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC642881004100521785 /* HomeViewModel.swift */; };
 		1CCDDC822883F85F00521785 /* HomeTimelinePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC812883F85F00521785 /* HomeTimelinePage.swift */; };
+		1CCDDC842885351100521785 /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC832885351000521785 /* TimelineViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		1CCDDC61287FC92C00521785 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		1CCDDC642881004100521785 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		1CCDDC812883F85F00521785 /* HomeTimelinePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTimelinePage.swift; sourceTree = "<group>"; };
+		1CCDDC832885351000521785 /* TimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				1CCDDC642881004100521785 /* HomeViewModel.swift */,
+				1CCDDC832885351000521785 /* TimelineViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				1C0C78EE2879429800ED0759 /* HomeViewController.swift in Sources */,
 				1CCDDB1E2879B69400521785 /* WebViewController.swift in Sources */,
 				1CCDDAFD287950CF00521785 /* TimelineViewController.swift in Sources */,
+				1CCDDC842885351100521785 /* TimelineViewModel.swift in Sources */,
 				1CCDDAFF2879520E00521785 /* TrendViewController.swift in Sources */,
 				1CCDDB192879917C00521785 /* SignInViewController.swift in Sources */,
 				1CCDDB31287C781D00521785 /* HomeIndexPage.swift in Sources */,
