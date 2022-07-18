@@ -34,15 +34,24 @@ class TrendViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return homeTrendPage.trend.edges.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-
-        cell.textLabel?.text = "あい上お"
-
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "QiitaTableViewCell") as? QiitaTableViewCell {
+            let node = homeTrendPage.trend.edges[indexPath.row].node
+            cell.setCell(
+                profileImageURL: node.author.profileImageURL,
+                id: node.author.urlName,
+                name: node.author.name,
+                publishedAt: node.publishedAt,
+                title: node.title,
+                tags: node.tags,
+                LGTM: node.likesCount
+            )
+            return cell
+        }
+        return UITableViewCell()
     }
 
     public func requestHomeTrendPage() {
@@ -64,7 +73,7 @@ class TrendViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     if try element.attr("data-component-name") == "HomeTrendPage" {
                         guard let elementData = element.data().data(using: .utf8) else { return }
                         let trend = try JSONDecoder().decode(HomeTrendPage.self, from: elementData)
-                        print(trend)
+                        self.homeTrendPage = trend
                     }
                 }
             } catch Exception.Error(_, let message) {
