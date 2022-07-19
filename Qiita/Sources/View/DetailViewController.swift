@@ -17,9 +17,9 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
 
     var webView: WKWebView!
 
-    public let keychain = Keychain(service: "com.Qiita")
-
     var loadString: String = ""
+
+    public let keychain = Keychain(service: "com.Qiita")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +46,6 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
 
         requestDetailPage()
     }
-
-    func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
-        scrollView.pinchGestureRecognizer?.isEnabled = false
-    }
     
     public func requestDetailPage() {
         guard let user_session_key = self.keychain["user_session_key"] else { return }
@@ -64,10 +60,9 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
             do {
                 guard let html: String = String(data: data, encoding: .utf8) else { return }
                 let doc: Document = try SwiftSoup.parse(html)
-                guard let element: Element = try doc.getElementById("personal-public-article-body") else { return }
+                guard let element: Element = try doc.getElementsByClass("p-items_main").first() else { return }
                 let articleBody: String = try element.html()
-
-                self.loadString = "<!DOCTYPE html><html lang=\"ja\"><head><meta charset=\"UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" media=\"all\" href=\"article.css\"><title>Document</title></head><body><section class=\"it-MdContent\">\(articleBody)</section></body></html>"
+                self.loadString = "<!DOCTYPE html><html lang=\"ja\"><head><meta charset=\"UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" media=\"all\" href=\"article.css\"><title>Document</title></head><body>\(articleBody)</body></html>"
                 let urlpath = Bundle.main.path(forResource: "article", ofType: "css")
                 let url = NSURL.fileURL(withPath: urlpath!)
                 self.webView.loadHTMLString(self.loadString, baseURL: url)
