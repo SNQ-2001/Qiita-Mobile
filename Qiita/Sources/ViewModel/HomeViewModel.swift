@@ -40,7 +40,7 @@ class HomeViewModel: NSObject {
         AF.request("https://qiita.com/", method: .get, headers: headers).responseData { response in
             guard let data = response.data else { return }
             do {
-                let html: String = String(data: data, encoding: .utf8) ?? ""
+                guard let html: String = String(data: data, encoding: .utf8) else { return }
                 let doc: Document = try SwiftSoup.parse(html)
 //                let link: Element = try doc.getElementById("js-react-on-rails-context")!
 //                let csrf_token = try JSONDecoder().decode(CSRFToken.self, from: link.data().data(using: .utf8)!)
