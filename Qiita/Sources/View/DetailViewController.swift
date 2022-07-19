@@ -11,7 +11,7 @@ import Alamofire
 import SwiftSoup
 import KeychainAccess
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIScrollViewDelegate {
     
     var linkURL = ""
 
@@ -24,12 +24,31 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        webView = WKWebView(frame: view.frame)
+        let disableSelectionScriptString = "document.documentElement.style.webkitUserSelect='none';"
+        let disableCalloutScriptString = "document.documentElement.style.webkitTouchCallout='none';"
+
+        let disableSelectionScript = WKUserScript(source: disableSelectionScriptString, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+        let disableCalloutScript = WKUserScript(source: disableCalloutScriptString, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+
+        let controller = WKUserContentController()
+        controller.addUserScript(disableSelectionScript)
+        controller.addUserScript(disableCalloutScript)
+
+        let configuration = WKWebViewConfiguration()
+        configuration.userContentController = controller
+        configuration.ignoresViewportScaleLimits = true
+        webView = WKWebView(frame: view.frame, configuration: configuration)
+
         view.addSubview(webView)
 
-        webView.scrollView.delegate = self
+        webView.scrollView.isScrollEnabled = true
+        webView.scrollView.bounces = false
 
         requestDetailPage()
+    }
+
+    func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
+        scrollView.pinchGestureRecognizer?.isEnabled = false
     }
     
     public func requestDetailPage() {
@@ -58,11 +77,5 @@ class DetailViewController: UIViewController {
                 print("error")
             }
         }
-    }
-}
-
-extension DetailViewController: UIScrollViewDelegate {
-    func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
-        scrollView.pinchGestureRecognizer?.isEnabled = false
     }
 }
