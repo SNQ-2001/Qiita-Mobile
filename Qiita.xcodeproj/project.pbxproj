@@ -42,6 +42,7 @@
 		1CCDDC8628853B8900521785 /* HomeTrendPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC8528853B8800521785 /* HomeTrendPage.swift */; };
 		1CCDDC882885405500521785 /* TrendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC872885405500521785 /* TrendViewModel.swift */; };
 		1CCDDC8A2885468800521785 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCDDC892885468800521785 /* DetailViewController.swift */; };
+		1CCDDC9328866D1D00521785 /* article.css in Resources */ = {isa = PBXBuildFile; fileRef = 1CCDDC9228866D1B00521785 /* article.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		1CCDDC8528853B8800521785 /* HomeTrendPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrendPage.swift; sourceTree = "<group>"; };
 		1CCDDC872885405500521785 /* TrendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewModel.swift; sourceTree = "<group>"; };
 		1CCDDC892885468800521785 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1CCDDC9228866D1B00521785 /* article.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = article.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 				1CCDDAFE2879520E00521785 /* TrendViewController.swift */,
 				1CCDDB32287D0AC800521785 /* QiitaTableViewCell.swift */,
 				1CCDDC892885468800521785 /* DetailViewController.swift */,
+				1CCDDC9228866D1B00521785 /* article.css */,
 				1CCDDB0E28797FA900521785 /* xib */,
 			);
 			path = View;
@@ -387,6 +390,7 @@
 				1CCDDB202879C3E800521785 /* signin_background.json in Resources */,
 				1CCDDC60287FC80200521785 /* FontAwesome.otf in Resources */,
 				1C0C78F32879429A00ED0759 /* Assets.xcassets in Resources */,
+				1CCDDC9328866D1D00521785 /* article.css in Resources */,
 				1CCDDB35287D0AC900521785 /* QiitaTableViewCell.xib in Resources */,
 				1C0C78F12879429800ED0759 /* Main.storyboard in Resources */,
 			);

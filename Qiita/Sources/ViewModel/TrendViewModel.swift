@@ -39,7 +39,7 @@ class TrendViewModel: NSObject {
         AF.request("https://qiita.com/trend", method: .get, headers: headers).responseData { response in
             guard let data = response.data else { return }
             do {
-                let html: String = String(data: data, encoding: .utf8) ?? ""
+                guard let html: String = String(data: data, encoding: .utf8) else { return }
                 let doc: Document = try SwiftSoup.parse(html)
                 let component: Elements = try doc.getElementsByClass("js-react-on-rails-component")
                 let elements: [Element] = component.array()
