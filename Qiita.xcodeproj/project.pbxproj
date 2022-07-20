@@ -155,8 +155,6 @@
 		1C0C78E82879429800ED0759 /* Qiita */ = {
 			isa = PBXGroup;
 			children = (
-				1C0C78E92879429800ED0759 /* AppDelegate.swift */,
-				1C0C78EB2879429800ED0759 /* SceneDelegate.swift */,
 				1C0C791C287942E500ED0759 /* Sources */,
 				1C0C7919287942A600ED0759 /* Resources */,
 			);
@@ -194,6 +192,8 @@
 		1C0C791C287942E500ED0759 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1C0C78E92879429800ED0759 /* AppDelegate.swift */,
+				1C0C78EB2879429800ED0759 /* SceneDelegate.swift */,
 				1CCDDC802883E87700521785 /* View */,
 				1CCDDC632880FFD000521785 /* ViewModel */,
 				1CCDDB2D287C454A00521785 /* Model */,
