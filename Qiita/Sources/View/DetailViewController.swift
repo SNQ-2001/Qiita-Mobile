@@ -11,7 +11,7 @@ import Alamofire
 import SwiftSoup
 import KeychainAccess
 
-class DetailViewController: UIViewController, UIScrollViewDelegate {
+class DetailViewController: UIViewController, WKNavigationDelegate {
     
     var linkURL = ""
 
@@ -42,7 +42,31 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         webView.scrollView.isScrollEnabled = true
         webView.scrollView.bounces = true
 
+        webView.navigationDelegate = self
+
         requestDetailPage()
+    }
+
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        guard let url = navigationAction.request.url else { return }
+        print(url)
+        if url.isFileURL {
+            decisionHandler(WKNavigationActionPolicy.allow)
+        } else {
+            safariAlert(url: url)
+            decisionHandler(WKNavigationActionPolicy.cancel)
+        }
+    }
+
+    func safariAlert(url: URL) {
+        let alertController = UIAlertController(title: "Safariで開きます", message: nil, preferredStyle: .alert)
+        let open = UIAlertAction(title: "OK", style: .default) { _ -> Void in
+            UIApplication.shared.open(url)
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { _ -> Void in }
+        alertController.addAction(open)
+        alertController.addAction(cancel)
+        present(alertController, animated: true, completion: nil)
     }
     
     public func requestDetailPage() {
